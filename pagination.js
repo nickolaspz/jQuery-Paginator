@@ -248,7 +248,7 @@
 		
 		if (options.a != null) {
 			if (options.a.onclick != null && options.a.onclick == 'goto') {
-				a.onclick = goToPage.bind(this, a, options.a.content);
+				a.onclick = goToPage.bind(this, options.a.content);
 			}
 			
 			if (options.a.content) {
@@ -294,6 +294,7 @@
     }
     
     function goToPage(pNumber) {
+    	console.log(pNumber);
     	this.opts.pageNumb = pNumber - 1;
 		render.call(this);
     }
